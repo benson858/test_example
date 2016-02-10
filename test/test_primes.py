@@ -1,33 +1,13 @@
-#
-# https://www.jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
-# https://docs.python.org/2.7/library/unittest.html
-#
-#   python -m unittest discover
-#
-
-
-import unittest
 from primes import is_prime
 
-class PrimesTestCase(unittest.TestCase):
-    """Tests for `primes.py`."""
+def test_is_0_to_100():
+    for index in range(0, 100):
+        if index in [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]:
+            assert is_prime(index) == True
+        else:
+            assert is_prime(index) == False
 
-    def test_is_five_prime(self):
-        """Is five successfully determined to be prime?"""
-        self.assertTrue(is_prime(5))
+def test_negative_number():
+    for index in range(-1, -10, -1):
+        assert is_prime(index) == False
 
-    def test_is_four_non_prime(self):
-        """Is four correctly determined not to be prime?"""
-        self.assertFalse(is_prime(4), msg='Four is not prime!')
-
-    def test_is_zero_not_prime(self):
-        """Is zero correctly determined not to be prime?"""
-        self.assertFalse(is_prime(0))
-
-    def test_negative_number(self):
-        """Is a negative number correctly determined not to be prime?"""
-        for index in range(-1, -10, -1):
-            self.assertFalse(is_prime(index), msg='{} should not be determined to be prime'.format(index))
-
-if __name__ == '__main__':
-    unittest.main()

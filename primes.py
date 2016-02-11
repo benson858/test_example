@@ -27,3 +27,19 @@ def print_next_prime(number):
             print(index)
 
 
+class primeNumberClass():
+    def isPrime(self, n):
+        if n < 2:
+            return False
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+
+    def nextPrime(self, number):
+        index = number + 1
+        while not self.isPrime(index):
+            index += 1
+        return index
+
+

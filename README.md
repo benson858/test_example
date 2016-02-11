@@ -11,3 +11,5 @@ sudo pip <a href="http://selenium-python.readthedocs.org/installation.html">inst
 - <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" >Chrome </a> and put the webdriver (chromedriver) in <b>/usr/local/webdriver/ </b> directory <br>
 - <a href="http://selenium-release.storage.googleapis.com/2.51/IEDriverServer_x64_2.51.0.zip" >Internet Explorer 64 bit </a> and put the webdriver (IEDriverServer.exe) in <b>c:\webdriver\ </b> directory
 - <a href="http://selenium-release.storage.googleapis.com/2.51/IEDriverServer_Win32_2.51.0.zip" >Internet Explorer 32 bit </a> and put the webdriver (IEDriverServer.exe) in <b>c:\webdriver\ </b> directory
+
+Refer: http://selenium-python.readthedocs.org/installation.html 
